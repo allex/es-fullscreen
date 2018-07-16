@@ -2,7 +2,9 @@
 import { isObject } from 'toxic-predicate-functions';
 import { VENDOR_PREFIXES, SYNONYMS } from './const';
 import { isElement, isString, isFunction, isEvent } from 'toxic-predicate-functions';
+import window from '@fedor/global';
 
+export const document = window.document;
 export const supportDocument = typeof document !== 'undefined';
 
 export function setStyle(el: Element, key: string | Object, val?: string) {

@@ -1,11 +1,21 @@
 {
- "presets": [
+  "presets": [
     "flow",
-    ["env", {"modules": false}],
-    "es2015",
-    "stage-0"
+    [ "env", {
+      "modules": false,
+      "loose": true,
+      "targets": {
+        "browsers": [ "last 2 versions", "not ie < 8" ]
+      },
+      "exclude": [ "transform-es2015-typeof-symbol", "transform-es2015-function-name" ]
+    } ]
   ],
   "plugins": [
-    "transform-decorators-legacy"
-  ]
+    [ "transform-object-rest-spread", { "useBuiltIns": true } ],
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    [ "transform-runtime", { "helpers": false, "polyfill": false } ],
+    "transform-es2015-modules-commonjs"
+  ],
+  "comments": false
 }

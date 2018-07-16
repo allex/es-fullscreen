@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import esFullscreen from '../../src/index.js';
 setTimeout(() => {
   [ 1, 2 ].forEach(key => {

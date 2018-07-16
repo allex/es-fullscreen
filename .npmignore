@@ -27,3 +27,8 @@ karma.conf.js
 webpack.config.js
 rollup.config.js
 src
+demo
+tests
+.eslint*
+.travis.yml
+.flowconfig

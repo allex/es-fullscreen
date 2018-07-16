@@ -116,8 +116,7 @@ You will find four differnet build in the lib.
 | Name             | Kind     | Meaning                                  | Need to define environment |
 | ---------------- | -------- | ---------------------------------------- | -------------------------- |
 | index.js         | commonjs | Common js, mostly used in Webpack 1.     | Yes                        |
-| index.mjs        | esmodule | in es module, mostly used in webpack 2 and rollup | Yes                        |
-| index.browser.js | umd      | Can be used in browser directly          | No(It's in development)    |
+| index.esm.js     | esmodule | in es module, mostly used in webpack 2 and rollup | Yes                        |
 | index.min.js     | umd      | Can be used in browser directly          | No(It's in production)     |
 
 ## Development vs. Production

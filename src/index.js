@@ -1,9 +1,11 @@
 // @flow
 import { defined, isElement, isPosterityNode, isFunction } from 'toxic-predicate-functions';
 import { DESKTOP_FULLSCREEN_STYLE, FULLSCREEN_CHANGE, FULLSCREEN_ERROR } from './const';
-import { setStyle, native, dispatchEvent, supportDocument } from './utils';
+import { setStyle, native, dispatchEvent, supportDocument, document } from './utils';
 import { autobindClass, alias } from 'toxic-decorators';
+
 const fullscreenEnabled = native('fullscreenEnabled');
+
 let useStyleFirst = false;
 
 @autobindClass()
@@ -125,9 +127,11 @@ class ESFullScreen {
       document[this._exitKey]();
       return true;
     }
+
     // $FlowFixMe: element is an Elment here
     const element: Element = this._fullscreenElement;
     setStyle(element, this._savedStyles);
+
     /* istanbul ignore else  */
     if (document.body) document.body.style.overflow = this._bodyOverflow;
     /* istanbul ignore else  */
@@ -136,6 +140,7 @@ class ESFullScreen {
     this._fullscreenElement = null;
     this._savedStyles = {};
     dispatchEvent(element, 'fullscreenchange');
+
     return true;
   }
 
@@ -170,4 +175,5 @@ class ESFullScreen {
     });
   }
 }
+
 export default new ESFullScreen();
