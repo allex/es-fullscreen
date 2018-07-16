@@ -1,6 +1,6 @@
 {
   "name": "es-fullscreen",
-  "version": "0.0.3",
+  "version": "0.3.1",
   "description": "fullscreen library written in es6",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -63,9 +63,10 @@
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-livereload": "^0.6.0",
     "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-resolve2": "~1.0.0",
+    "rollup-plugin-resolve-id": "~1.0.1",
     "rollup-plugin-serve": "^0.4.2",
-    "rollup-plugin-typescript": "^0.8.1"
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-worker": "next"
   },
   "jest": {
     "modulePaths": [
@@ -87,5 +88,8 @@
     "transform": {
       ".*": "babel-jest"
     }
-  }
+  },
+  "files": [
+    "lib/index{.min,.esm,}.js"
+  ]
 }

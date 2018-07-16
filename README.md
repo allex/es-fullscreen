@@ -1,11 +1,11 @@
-# es-fullscreen
+# @hitv/es-fullscreen
 
-[![Build Status](https://img.shields.io/travis/toxic-johann/es-fullscreen/master.svg?style=flat-square)](https://travis-ci.org/toxic-johann/es-fullscreen.svg?branch=master)
-[![Coverage Status](https://img.shields.io/coveralls/toxic-johann/es-fullscreen/master.svg?style=flat-square)](https://coveralls.io/github/toxic-johann/es-fullscreen?branch=master)
+[![Build Status](https://img.shields.io/travis/allex/es-fullscreen/master.svg?style=flat-square)](https://travis-ci.org/allex/es-fullscreen.svg?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/allex/es-fullscreen/master.svg?style=flat-square)](https://coveralls.io/github/allex/es-fullscreen?branch=master)
 [![npm](https://img.shields.io/npm/v/es-fullscreen.svg?colorB=brightgreen&style=flat-square)](https://www.npmjs.com/package/es-fullscreen)
 [![npm download times](https://img.shields.io/npm/dm/es-fullscreen.svg)](https://www.npmjs.com/package/es-fullscreen)
-[![dependency Status](https://david-dm.org/toxic-johann/es-fullscreen.svg)](https://david-dm.org/toxic-johann/es-fullscreen)
-[![devDependency Status](https://david-dm.org/toxic-johann/es-fullscreen/dev-status.svg)](https://david-dm.org/toxic-johann/es-fullscreen?type=dev)
+[![dependency Status](https://david-dm.org/allex/es-fullscreen.svg)](https://david-dm.org/allex/es-fullscreen)
+[![devDependency Status](https://david-dm.org/allex/es-fullscreen/dev-status.svg)](https://david-dm.org/allex/es-fullscreen?type=dev)
 
 ## Get start
 
@@ -14,13 +14,14 @@
 You can install through npm.
 
 ```sh
-$ npm install es-fullscreen --save-dev
+$ yarn add @hitv/es-fullscreen --save-dev
 ```
 
 And then you can use it like this.
 
 ```javascript
-import esFullscreen from 'es-fullscreen';
+import esFullscreen from '@hitv/es-fullscreen';
+
 esFullscreen.open(document.body);
 ....
 esFullscreen.exit();
@@ -70,7 +71,7 @@ Represent is fullscreen or not.
 * alias
   * addEventListener
 * Arguments
-  * {string} name: event's name, only can be 'fullscreenchange',  'fullscreenerror' or 'esfullscreenmethodchange' (supported after [0.3.0](https://github.com/toxic-johann/es-fullscreen/releases/tag/0.3.0))
+  * {string} name: event's name, only can be 'fullscreenchange',  'fullscreenerror' or 'esfullscreenmethodchange' (supported after [0.3.0](https://github.com/allex/es-fullscreen/releases/tag/0.3.0))
   * {Function} fn
   * {Element} element: default to be `document`
 * Details
@@ -80,7 +81,7 @@ To let user listen on 'fullscreenchange' and 'fullscreenerror' more easily. You 
 * example
 
 ```javascript
-import esFullscreen from 'es-fullscreen';
+import esFullscreen from '@hitv/es-fullscreen';
 esFullscreen.on('fullscreenchange', evt => console.log('change!'));
 esFullscreen.open(document.body); // change!
 ```
@@ -95,7 +96,7 @@ Totally the same as `on`.
 
 ### useStyleFirst
 
-> supported after [0.3.0](https://github.com/toxic-johann/es-fullscreen/releases/tag/0.3.0)
+> supported after [0.3.0](https://github.com/allex/es-fullscreen/releases/tag/0.3.0)
 
 * type
   * boolean
@@ -107,7 +108,7 @@ When it's true, we will use style to fullscreen but not native way. You can chan
 
 ## Changelog
 
-Please read the [realase notes](https://github.com/toxic-johann/es-fullscreen/releases).
+Please read the [realase notes](https://github.com/allex/es-fullscreen/releases).
 
 ## Explanation of Different Build
 

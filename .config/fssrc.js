@@ -3,7 +3,7 @@
 import path from 'path'
 import replace from 'rollup-plugin-replace'
 import flow from 'rollup-plugin-flow-no-whitespace'
-import importResolver from 'rollup-plugin-resolve2'
+import resolveId from 'rollup-plugin-resolve-id'
 
 import babelrc from '../.babelrc'
 import { version, name, author, license, dependencies } from '../package.json'
@@ -25,7 +25,7 @@ const banner = (name, short = false) => {
 
 const resolve = p => path.resolve(__dirname, '..', p)
 const plugins = [
-  importResolver({
+  resolveId({
     extensions: ['.js', '.ts'],
     alias: {
       'toxic-utils': require.resolve('toxic-utils/src'),
@@ -37,9 +37,7 @@ const plugins = [
   flow,
   'resolve',
   'commonjs',
-  replace({
-    'process.env.NODE_ENV': `'production'`
-  })
+  replace({ 'process.env.NODE_ENV': `'production'` })
 ]
 
 export default {
